@@ -1,63 +1,81 @@
+# import les librairies necessaires
 import pandas as pd
 import statsmodels.api as sm
 
-
+# load the data
 df = pd.read_excel('Donnees_Exercice_4_2.xlsx')
-
+# print the data
 print(df)
 
+# print a description of the data
 print(df.describe())
 
 # print all column names
 print(df.columns)
 
+# add a new column to the data frame (visites par personne)
 df["Visits_per_person"] = df["Visits "] / df["Population"]
+# reprint de data frame
 print(df)
 
+# ces variables viennent de lenonce de la question 4.2 donc on fais juste les assigner
 Dry_revenu = 31500
 Dry_population = 70230
 
-
+#premiere methode de regression que le prof donne:
+#Visits_per_person = alpha_0 + alpha_1 * Fee + alpha_2 * Income
+#on assigne alors les variables Fee et Income a X et Visits_per_person a y
 X = df[['Fee ($)', 'Income ($)']]
 X = sm.add_constant(X)
-
-
 y = df['Visits_per_person']
 
+#on regresse les variables
 model = sm.OLS(y, X).fit()
 
+#on recupere les coefficients
 coefficients = model.params
 
+#on calcule alpha_0 et alpha_1
 alpha_0 = (coefficients['const'] + coefficients['Income ($)'] * Dry_revenu) * Dry_population
 alpha_1 = coefficients['Fee ($)'] * Dry_population
 
-
+#on les affiches
 print(f"alpha_0: {alpha_0}")
 print(f"alpha_1: {alpha_1}")
 
+#on calcule q et on le print
 q1 = alpha_0 + alpha_1
 print(f"q1: {q1}")
 
-
+#on fait la seconde regression avec les variables Fee, Income et Population comme variables explicatives
+#et simplement Visits comme variable a predire. ca fait du sens puisque dans un cas, tu utilise une variable qui
+#deja un ratio de visites par personne et dans l'autre tu utilise directement le nombre de visites mais
+#on rajoute la population dans les variables expliquatives.
+#on peut dire que c'est equivalent
 X = df[['Fee ($)', 'Income ($)', "Population"]]
 X = sm.add_constant(X)
 y = df['Visits ']
 
+#on roule la deuxieme regression
 model = sm.OLS(y, X).fit()
+
+#on recupere encore les coeficients
 coefficients = model.params
 
+#on calcule alpha_0 et alpha_1 puis on les imprime
 alpha_0 = (coefficients['const'] + coefficients['Income ($)'] * Dry_revenu + coefficients['Population'] * Dry_population)
 alpha_1 = coefficients['Fee ($)']
 
 print(f"alpha_0: {alpha_0}")
 print(f"alpha_1: {alpha_1}")
 
+#on calcule q2 et on le print
 q2 = alpha_0 + alpha_1
 
 print(f"q2: {q2}")
 
 
-# part a with regression 2
+# a) with regression 2
 
 p_bar = -1*alpha_0/alpha_1
 print(f"p_bar: {p_bar}")
@@ -67,7 +85,7 @@ CS = 0.5 * p_bar * alpha_0
 print(f"CS: {CS}")
 
 
-# part b with regression 2
+# b) with regression 2
 
 p1 = 1
 q1 = alpha_0 + alpha_1 * p1
