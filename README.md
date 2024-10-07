@@ -20,12 +20,16 @@ Python
 Ouvre le terminal sur ton ordi et copie-colle la commande ci-dessous, puis appuie sur "Entrée".
 (On va installer Homebrew, un outil qui permet d'installer d'autres logiciels, comme Git, dont tu as besoin pour récupérer mon code.)
 
-```/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"```
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
 
 ### Installe Git
 (Toujours dans le terminal, copie et colle cette commande, puis appuie sur "Entrée". Git te permet de cloner (copier) mon code.)
 
-```brew install git```
+```bash
+brew install git
+```
 
 ### Installe Python
 -> Télécharge-le ici. "https://www.python.org/downloads/"
@@ -43,16 +47,23 @@ Ouvre le terminal sur ton ordi et copie-colle la commande ci-dessous, puis appui
 
 ### Installe les librairies nécessaires
 (Toujours dans le terminal, copie-colle ces deux commandes pour installer les librairies dont on a besoin pour le devoir.)
+```bash
+pip install pandas
+```
 
-```pip install pandas```
-
-```pip install statsmodels```
+```bash
+pip install pandas
+```
 
 si ca marche pas, essaye
 
-```pip3 install pandas```
+```bash
+pip3 install pandas
+```
 
-```pip3 install statsmodels```
+```bash
+pip3 install statsmodels
+```
 
 Et voilà, normalement tu es prête à commencer ! Tout ce que tu viens de faire, c’est à faire une seule fois, et ça te facilitera la vie pour les autres devoirs ou exercices.
 
