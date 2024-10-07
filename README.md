@@ -15,6 +15,8 @@ Python
 ### Installe Visual Studio Code
 -> Télécharge-le ici. "https://code.visualstudio.com/"
 (C'est juste un éditeur de code, un peu comme Word, mais pour coder.)
+
+### installe homebrew
 Ouvre le terminal sur ton ordi et copie-colle la commande ci-dessous, puis appuie sur "Entrée".
 (On va installer Homebrew, un outil qui permet d'installer d'autres logiciels, comme Git, dont tu as besoin pour récupérer mon code.)
 
