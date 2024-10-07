@@ -1,44 +1,56 @@
-voici les etapes pour l'exercise 4.2 ainsi que la donne necessaire (la donne se trouve aussi sur studium).
+# Instructions pour l'exercice 4.2
 
-requirements
-  -python
-    -pandas
-    -statsmodels
+Voici les étapes à suivre pour réaliser l'exercice 4.2, ainsi que les fichiers nécessaires (les données se trouvent aussi sur Studium).
 
-(lele, vu que ta aucune idee de c'est quoi, je vais te detailler comment installer python et le faire fonctionner sur ton ordi,
-tu pouras toujours revenir voir ici comment faire si ten as besoin)
+## Pré-requis
 
-1: install ca -> https://code.visualstudio.com/      (c'est juste un editeur de code de base, comme word mais pour coder)
+Python
+  -pandas
+  -statsmodels
 
-2: ouvre lapp sur ton ordi qui sappelle terminal et fait juste copier et coller la commande ci dessous, puis appuie sur enter pour l'executer
-(on install brew pour installer git afin que tu puisse cloner mon code)
 
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+(Lele, comme tu n’as jamais programmé, je vais t’expliquer en détail comment installer Python et le faire fonctionner sur ton ordi. N’hésite pas à revenir ici si tu es bloquée à un moment donné.)
 
-3: toujours dans le terminal, fais la meme chose pour ca
-(maintenet, on install git comme mentionne plus haut. once again ca c'est juste pour que tu puisse copier mon code, ca a pas rapport avec le devoir en ten que tel)
+## Étapes pour installer tout ce que tas besoin
+### Installe Visual Studio Code
+-> Télécharge-le ici. "https://code.visualstudio.com/"
+(C'est juste un éditeur de code, un peu comme Word, mais pour coder.)
+Ouvre le terminal sur ton ordi et copie-colle la commande ci-dessous, puis appuie sur "Entrée".
+(On va installer Homebrew, un outil qui permet d'installer d'autres logiciels, comme Git, dont tu as besoin pour récupérer mon code.)
 
-brew install git
+```/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"```
 
-4: install ca -> https://www.python.org/downloads/
-(le prof travail en R mais blc python c'est plus facile. on install python parce que ca prends un language de programmation pour faire ses trucs... aussi je connais pas R)
+### Installe Git
+(Toujours dans le terminal, copie et colle cette commande, puis appuie sur "Entrée". Git te permet de cloner (copier) mon code.)
 
-5: clone le repo (mon code) dans vscode.
-  -ouvre vscode (que ta installer plus haut)
-  -a gauche il ya plusieurs icone, clique sur la genre de branche avec 3 boules qui sappelle source control.
-  -une fois dans source control, tu vas voir, en haut a droite, <<...>> (un icone de trois petits points), clique sur "clone" et choisi "from github" pui colle ca dedans
-  <<https://github.com/gabrielderome/cost_benefit_ana.git>>
-(bravo ta copier mon code!)
+```brew install git```
 
-6: ouvre ton terminal encore once again et copy paste les 2 commandes
-(install les librairies que jutilise pour le devoir dans ton python)
+### Installe Python
+-> Télécharge-le ici. "https://www.python.org/downloads/"
 
-pip install pandas
-pip install statsmodels
+(Le prof utilise R, mais on va travailler avec Python parce que c’est plus simple et je le maîtrise mieux.)
+### Clone mon repo dans VS Code
+-Ouvre Visual Studio Code.
 
-et la normalement on est good pour commencer le devoir XD -> tout ce que tas fait (ou pas) jusqua maintenent tas juste besoin de le faire une fois et ca vas te rendre la vie plus
-facile pour les prochaines fois ou tauras besoin de copier mon code dans ce cours ou un autre.
+-À gauche, tu verras plusieurs icônes. Clique sur celle qui ressemble à une branche avec trois points (c’est "Source Control").
 
-pour le devoir en lui meme tu peux aller voir le script et les results dans le file qui fini par .py et si tu veux rouler les trucs toi
-meme, un par un et voir ce que ca fait, tu peux aller rouler le "notebook", donc le file qui fini par .ipynb.
+-En haut à droite, clique sur les trois petits points ("..."), puis sur "Clone". Choisis "From GitHub" et colle ce lien:
+"https://github.com/gabrielderome/cost_benefit_ana.git"
 
+(Bravo, tu as copié mon code sur ton ordi !)
+
+### Installe les librairies nécessaires
+(Toujours dans le terminal, copie-colle ces deux commandes pour installer les librairies dont on a besoin pour le devoir.)
+
+```pip install pandas```
+
+```pip install statsmodels```
+
+Et voilà, normalement tu es prête à commencer ! Tout ce que tu viens de faire, c’est à faire une seule fois, et ça te facilitera la vie pour les autres devoirs ou exercices.
+
+## Pour le devoir en lui-même :
+Tu peux regarder le script et les résultats dans le fichier qui se termine par .py.
+
+Si tu veux exécuter toi-même les différentes étapes, tu peux ouvrir le fichier .ipynb (notebook) et voir les résultats au fur et à mesure.
+
+J’espère que ça te sera utile ! N’hésite pas si tu as des questions, je suis là pour t’aider 😄.
