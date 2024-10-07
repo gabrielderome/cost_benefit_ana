@@ -48,6 +48,12 @@ Ouvre le terminal sur ton ordi et copie-colle la commande ci-dessous, puis appui
 
 ```pip install statsmodels```
 
+si ca marche pas, essaye
+
+```pip3 install pandas```
+
+```pip3 install statsmodels```
+
 Et voilà, normalement tu es prête à commencer ! Tout ce que tu viens de faire, c’est à faire une seule fois, et ça te facilitera la vie pour les autres devoirs ou exercices.
 
 ## Pour le devoir en lui-même :
