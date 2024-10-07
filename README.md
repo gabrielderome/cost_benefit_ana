@@ -52,7 +52,7 @@ pip install pandas
 ```
 
 ```bash
-pip install pandas
+pip install statsmodels
 ```
 
 si ca marche pas, essaye
